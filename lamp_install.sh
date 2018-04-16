@@ -5,13 +5,14 @@ TEXT_YELLOW='\e[0;33m'
 TEXT_RED_B='\e[1;31m'
 
 ## Configures MariaDB repository
+sudo touch /etc/yum.repos.d/MariaDB.repo
 sudo echo '# MariaDB 10.2 CentOS repository list - created 2018-03-24 19:05 UTC
 # http://downloads.mariadb.org/mariadb/repositories/
 [mariadb]
 name = MariaDB
 baseurl = http://yum.mariadb.org/10.2/centos7-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-gpgcheck=1' | tee /etc/yum.repos.d/MariaDB.repo
+gpgcheck=1' >> /etc/yum.repos.d/MariaDB.repo
 echo -e $TEXT_YELLOW
 echo 'MariaDB repository configured with success!'
 echo -e $TEXT_RESET
