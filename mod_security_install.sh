@@ -1,6 +1,6 @@
 
 # Instalação de pré-requisitos
-yum install gcc make httpd-devel libxml2 pcre-devel libxml2-devel curl-devel wget
+yum install gcc make httpd-devel libxml2 pcre-devel libxml2-devel curl-devel wget vim
 
 cd /opt
 
