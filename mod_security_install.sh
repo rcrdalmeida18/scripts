@@ -1,3 +1,4 @@
+
 # Instalação de pré-requisitos
 yum install gcc make httpd-devel libxml2 pcre-devel libxml2-devel curl-devel wget
 
@@ -18,9 +19,9 @@ cd modsecurity-2.9.2
 make install
 
 # Cópia dos ficheiros de configuração para o diretório do Apache
-cp modsecurity.conf-recommended /etc/httpd/conf.d/modsecurity.conf
-cp unicode.mapping /etc/httpd/conf.d/
+sudo cp modsecurity.conf-recommended /etc/httpd/conf.d/modsecurity.conf
+sudo cp unicode.mapping /etc/httpd/conf.d/
 
 # Adicionar o modulo ao ficheiro de configuração
 # LoadModule security2_module modules/mod_security2.so
-vim /etc/httpd/conf.modules.d/00-base.conf
+sudo vim /etc/httpd/conf.modules.d/00-base.conf
